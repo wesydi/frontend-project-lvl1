@@ -33,7 +33,7 @@
     "defaults"
   ],
   "bin": {
-    "brain-games": "dist/bin/brain-even.js"
+    "brain-even": "dist/bin/brain-even.js"
   },
   "files": [
     "dist"

@@ -14,10 +14,15 @@ const evenNumber = (usrName) => {
     if (answerUser === 'yes' && number % 2 === 0 || answerUser === 'no' && number % 2 !== 0) {
       acc += 1;
       console.log(`Correct!`);
-    } else {
-      acc = 0;
-      console.log(`'yes' is wrong answer ;(. Correct answer was 'no'. Let's try again, ${usrName}!`);
     }
+    if (answerUser !== 'yes' && number % 2 === 0) {
+      acc = 1;
+      console.log(`'${answerUser}' is wrong answer ;(. Correct answer was 'yes'. Let's try again, ${usrName}!`);
+  	}
+  	if (answerUser !== 'no' && number % 2 !== 0) {
+      acc = 1;
+      console.log(`'${answerUser}' is wrong answer ;(. Correct answer was 'no'. Let's try again, ${usrName}!`);
+  	}
     return iter(Math.floor(Math.random() * 10), acc);
   };
   return iter(randomNumber, 1);
