@@ -1,7 +1,25 @@
 import readlineSync from 'readline-sync';
 
-const whatsUrName = () => {
+const name = () => {
   const userName = readlineSync.question('May I have your name? ');
-  console.log(`Hi ${userName}!`);
+  return userName;
 };
-export default whatsUrName;
+
+const evenNumber = (usrName) => {
+	const randomNumber = Math.floor(Math.random() * 10);
+	const iter = (number, acc) => {
+		const answerUser = readlineSync.question(number);
+		if (acc === 3) return `Congratulations, ${usrName}!`;
+		if (answerUser === 'yes' && number % 2 === 0 || answerUser === 'no' && number % 2 !== 0) {
+			acc += 1;
+			console.log(`Correct!`);
+		}
+		else {
+			acc = 0;
+			console.log(`'yes' is wrong answer ;(. Correct answer was 'no'. Let's try again, ${usrName}!`)
+		};
+		return iter(Math.floor(Math.random() * 10), acc);
+	};
+	return iter(randomNumber, 1)
+};
+export { name, evenNumber };
