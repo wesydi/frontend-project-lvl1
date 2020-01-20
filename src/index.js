@@ -6,7 +6,7 @@ const name = () => {
 };
 
 const evenNumber = (usrName) => {
-  const randomNumber = Math.floor(Math.random() * 10);
+  const randomNumber = (min, max) => Math.floor(Math.random() * (max - min)) + min;
   let acc = 0;
   const iter = (number) => {
     if (acc === 3) return `Congratulations, ${usrName}!`;
@@ -22,6 +22,6 @@ const evenNumber = (usrName) => {
     }
     return iter(Math.floor(Math.random() * 10));
   };
-  return iter(randomNumber);
+  return iter(randomNumber(1, 100));
 };
 export { name, evenNumber };
