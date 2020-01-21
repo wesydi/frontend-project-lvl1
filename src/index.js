@@ -26,7 +26,7 @@ const evenNumber = (usrName) => {
 };
 
 const calc = (usrName) => {
-const randomNumber = (min, max) => Math.floor(Math.random() * (max - min)) + min;
+  const randomNumber = (min, max) => Math.floor(Math.random() * (max - min)) + min;
   let acc = 0;
   const iter = (number, anotherNumber) => {
     if (acc === 3) return `Congratulations, ${usrName}!`;
@@ -35,9 +35,13 @@ const randomNumber = (min, max) => Math.floor(Math.random() * (max - min)) + min
     console.log(`Question: ${number} ${operation} ${anotherNumber}`);
     const answerUser = readlineSync.question('Your answer: ');
     let correctAnswer = 0;
-    if (operation === '*') correctAnswer = number * anotherNumber;
-    if (operation === '+') correctAnswer = number + anotherNumber;
-    if (operation === '-') correctAnswer = number - anotherNumber;
+    switch (operation) {
+      case '*': correctAnswer = number * anotherNumber;
+        break;
+      case '+': correctAnswer = number + anotherNumber;
+        break;
+      default: correctAnswer = number - anotherNumber;
+    }
     if (String(correctAnswer) === answerUser) {
       acc += 1;
       console.log('Correct!');
