@@ -22,7 +22,7 @@ const evenNumber = (usrName) => {
       acc = 0;
       console.log(`'${answerUser}' is wrong answer ;(. Correct answer was '${correctAnswer}'. \nLet's try again, ${usrName}!`);
     }
-    return iter(Math.floor(Math.random() * 10));
+    return iter(randomNumber(1, 100));
   };
   return iter(randomNumber(1, 100));
 };
