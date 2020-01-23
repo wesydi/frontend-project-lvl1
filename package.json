@@ -1,7 +1,14 @@
 {
   "name": "frontend-project-lvl1",
   "version": "1.0.0",
-  "description": "",
+  "description": "console utility with 5 games",
+  "keywords": [
+    "brain-even",
+    "brain-calc",
+    "brain-gcd",
+    "brain-prime",
+    "brain-progression"
+  ],
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
