@@ -5,8 +5,4 @@ const name = () => {
   return userName;
 };
 
-const engine = (func) => func;
-
-export {
-  name, engine,
-};
+export default name;
