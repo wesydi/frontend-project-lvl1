@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import { name, engine } from '..';
-import gcd from '../games/gcd.js';
+import gcd from '../games/gcd';
 
 console.log('Welcome to the Brain Games!\nFind the greatest common divisor of given numbers.');
 const userName = name();

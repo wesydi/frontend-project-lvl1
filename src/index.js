@@ -5,8 +5,8 @@ const name = () => {
   return userName;
 };
 
-const engine = (func) => func; 
+const engine = (func) => func;
 
 export {
-  name, engine, 
+  name, engine,
 };

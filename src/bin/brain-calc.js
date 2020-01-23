@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import { name, engine } from '..';
-import calc from '../games/calc.js';
+import calc from '../games/calc';
 
 console.log('Welcome to the Brain Games!\nWhat is the result of the expression?');
 const userName = name();

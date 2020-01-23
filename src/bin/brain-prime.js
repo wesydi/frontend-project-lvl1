@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import { name, engine } from '..';
-import prime from '../games/prime.js';
+import prime from '../games/prime';
 
 console.log('Welcome to the Brain Games!\nAnswer "yes" if given number is prime. Otherwise answer "no".');
 const userName = name();

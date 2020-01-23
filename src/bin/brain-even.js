@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import { name, engine } from '..';
-import evenNumber from '../games/even.js';
+import evenNumber from '../games/even';
 
 console.log('Welcome to the Brain Games!\nAnswer "yes" if the number is even, otherwise answer "no".');
 const userName = name();
