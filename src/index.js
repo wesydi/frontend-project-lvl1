@@ -2,6 +2,7 @@ import readlineSync from 'readline-sync';
 
 const name = () => {
   const userName = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${userName}\n`);
   return userName;
 };
 
@@ -9,10 +10,9 @@ const engine = (game) => {
   const [correctAnswer, question, welcomeMessage] = game();
   console.log(welcomeMessage);
   const userName = name();
-  console.log(`Hello, ${userName}\n`);
   let acc = 0;
   const iter = (answerCorrect, questions) => {
-    if (acc === 3) return `Congratulations, ${userName}!`;
+    if (acc === 3) return console.log(`Congratulations, ${userName}!`);
     console.log(`Question: ${questions}`);
     const answerUser = readlineSync.question('Your answer: ');
     if (String(answerCorrect) === answerUser) {
