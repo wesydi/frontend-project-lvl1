@@ -1,22 +1,11 @@
-import readlineSync from 'readline-sync';
+import randomNumber from '../utils';
 
-const evenNumber = (usrName) => {
-  const randomNumber = (min, max) => Math.floor(Math.random() * (max - min)) + min;
-  let acc = 0;
-  const iter = (number) => {
-    if (acc === 3) return `Congratulations, ${usrName}!`;
-    console.log(`Question: ${number}`);
-    const answerUser = readlineSync.question('Your answer: ');
-    const correctAnswer = number % 2 === 0 ? 'yes' : 'no';
-    if (correctAnswer === answerUser) {
-      acc += 1;
-      console.log('Correct!');
-    } else {
-      acc = 0;
-      console.log(`'${answerUser}' is wrong answer ;(. Correct answer was '${correctAnswer}'. \nLet's try again, ${usrName}!`);
-    }
-    return iter(randomNumber(1, 100));
-  };
-  return iter(randomNumber(1, 100));
+const evenNumber = () => {
+  const welcomeMessage = 'Welcome to the Brain Games!\nAnswer "yes" if the number is even, otherwise answer "no".';
+  const number = randomNumber(1, 100);
+  const question = `${number}`;
+  const isEven = (num) => (num % 2 === 0);
+  const correctAnswer = isEven(number) ? 'yes' : 'no';
+  return [correctAnswer, question, welcomeMessage];
 };
 export default evenNumber;
