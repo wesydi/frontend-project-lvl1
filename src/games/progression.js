@@ -1,8 +1,8 @@
 import randomNumber from '../utils';
+import engine from '..';
 
-const progression = () => {
-  const welcomeMessage = 'Welcome to the Brain Games!\nWhat number is missing in the progression?.';
-  const number = randomNumber(1, 10);
+const gameProgression = () => {
+  const number = randomNumber(1, 9);
   let array = [0];
   for (let i = 0; i < 10; i += 1) {
     array.push((array[array.length - 1]) + number);
@@ -10,9 +10,14 @@ const progression = () => {
   array = array.slice(1);
   const arrayProgression = array.slice();
   arrayProgression[number] = '..';
-  const question = `${arrayProgression}`;
-  const correctAnswer = array[number];
-  return [correctAnswer, question, welcomeMessage];
+  const question = String(arrayProgression);
+  const correctAnswer = String(array[number]);
+  return [correctAnswer, question];
+};
+
+const progression = () => {
+  console.log('Welcome to the Brain Games!\nWhat number is missing in the progression?.');
+  engine(gameProgression);
 };
 
 export default progression;
