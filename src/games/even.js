@@ -10,9 +10,9 @@ const gameEven = () => {
   return [correctAnswer, question];
 };
 
-const evenNumber = () => {
+const even = () => {
   console.log('Welcome to the Brain Games!\nAnswer "yes" if the number is even, otherwise answer "no".');
   return engine(gameEven);
 };
 
-export default evenNumber;
+export default even;
