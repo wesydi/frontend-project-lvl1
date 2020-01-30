@@ -8,7 +8,7 @@ const isPrime = (num) => {
   for (let i = 1; i <= num; i += 1) {
     if (num % i === 0) array.push(i);
   }
-  return (array.length === 2 && array[0] === 1 && array[1] === num);
+  return (array.length === 2);
 };
 
 const gamePrime = () => {
