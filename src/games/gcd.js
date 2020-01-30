@@ -1,6 +1,8 @@
 import randomNumber from '../utils';
 import engine from '..';
 
+const gameMessage = `Find the greatest common divisor of given numbers.`;
+
 const getCommonDivider = (number1, number2) => {
   let answer = '';
   for (let i = 0; i < 100; i += 1) {
@@ -14,11 +16,9 @@ const gameGcd = () => {
   const num2 = randomNumber(1, 100);
   const question = `${num1}, ${num2}`;
   const correctAnswer = String(getCommonDivider(num1, num2));
-  return [correctAnswer, question];
+  return [correctAnswer, question, gameMessage];
 };
 
-const gcd = () => {
-  console.log('Welcome to the Brain Games!\nFind the greatest common divisor of given numbers.');
-  return engine(gameGcd);
-};
+const gcd = () => engine(gameGcd);
+
 export default gcd;

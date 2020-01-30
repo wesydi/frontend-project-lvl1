@@ -1,7 +1,8 @@
 import readlineSync from 'readline-sync';
 
 const engine = (game) => {
-  const [correctAnswer, question] = game();
+  const [correctAnswer, question, gameMessage] = game();
+  console.log(`Welcome to the Brain Games!\n${gameMessage}`);
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}\n`);
   let acc = 0;

@@ -1,6 +1,8 @@
 import randomNumber from '../utils';
 import engine from '..';
 
+const gameMessage = `Answer "yes" if given number is prime. Otherwise answer "no".`;
+
 const isPrime = (num) => {
   const array = [];
   for (let i = 1; i <= num; i += 1) {
@@ -13,12 +15,9 @@ const gamePrime = () => {
   const number = randomNumber(1, 100);
   const question = String(number);
   const correctAnswer = isPrime(number) ? 'yes' : 'no';
-  return [correctAnswer, question];
+  return [correctAnswer, question, gameMessage];
 };
 
-const prime = () => {
-  console.log('Welcome to the Brain Games!\nAnswer "yes" if given number is prime. Otherwise answer "no".');
-  return engine(gamePrime);
-};
+const prime = () => engine(gamePrime);
 
 export default prime;
