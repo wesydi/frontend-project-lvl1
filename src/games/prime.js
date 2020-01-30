@@ -1,7 +1,7 @@
 import randomNumber from '../utils';
 import engine from '..';
 
-const gameMessage = `Answer "yes" if given number is prime. Otherwise answer "no".`;
+const gameMessage = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const isPrime = (num) => {
   const array = [];

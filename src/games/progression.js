@@ -1,19 +1,23 @@
 import randomNumber from '../utils';
 import engine from '..';
 
-const gameMessage = `What number is missing in the progression?`;
+const gameMessage = 'What number is missing in the progression?';
+
+const getProgression = (firstElement, diff, length) => {
+  const result = [firstElement];
+  for (let i = 1; i < length; i += 1) {
+    result.push(firstElement + (diff * i));
+  }
+  return result;
+}
 
 const gameProgression = () => {
   const number = randomNumber(1, 9);
-  let array = [0];
-  for (let i = 0; i < 10; i += 1) {
-    array.push((array[array.length - 1]) + number);
-  }
-  array = array.slice(1);
-  const arrayProgression = array.slice();
-  arrayProgression[number] = '..';
-  const question = String(arrayProgression);
-  const correctAnswer = String(array[number]);
+  const progression = getProgression(0, number, 10).slice(1);
+  const progressionWithSkip = progression.slice();
+  progressionWithSkip[number] = '..';
+  const question = String(progressionWithSkip);
+  const correctAnswer = String(progression[number]);
   return [correctAnswer, question, gameMessage];
 };
 

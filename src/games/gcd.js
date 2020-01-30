@@ -1,7 +1,7 @@
 import randomNumber from '../utils';
 import engine from '..';
 
-const gameMessage = `Find the greatest common divisor of given numbers.`;
+const gameMessage = 'Find the greatest common divisor of given numbers.';
 
 const getCommonDivider = (number1, number2) => {
   let commonDivider;

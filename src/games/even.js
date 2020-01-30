@@ -1,7 +1,7 @@
 import randomNumber from '../utils';
 import engine from '..';
 
-const gameMessage = `Answer "yes" if the number is even, otherwise answer "no".`;
+const gameMessage = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const isEven = (num) => (num % 2 === 0);
 

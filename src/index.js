@@ -14,7 +14,8 @@ const engine = (game) => {
       acc += 1;
       console.log('Correct!');
     } else {
-      return console.log(`'${answerUser}' is wrong answer ;(. Correct answer was '${answerCorrect}'. \nLet's try again, ${userName}!`);
+    	acc = 0
+      console.log(`'${answerUser}' is wrong answer ;(. Correct answer was '${answerCorrect}'. \nLet's try again, ${userName}!`);
     }
     const [newAnswer, newQuestion] = game();
     return iter(newAnswer, newQuestion);
