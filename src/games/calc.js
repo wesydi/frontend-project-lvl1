@@ -1,5 +1,5 @@
 import randomNumber from '../utils';
-import engine from '..';
+import generateGame from '..';
 
 const gameMessage = 'What is the result of the expression?';
 
@@ -23,6 +23,6 @@ const gameCalc = () => {
   return [correctAnswer, question, gameMessage];
 };
 
-const calc = () => engine(gameCalc);
+const calc = () => generateGame(gameCalc);
 
 export default calc;

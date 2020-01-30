@@ -1,5 +1,5 @@
 import randomNumber from '../utils';
-import engine from '..';
+import generateGame from '..';
 
 const gameMessage = 'What number is missing in the progression?';
 
@@ -9,7 +9,7 @@ const getProgression = (firstElement, diff, length) => {
     result.push(firstElement + (diff * i));
   }
   return result;
-}
+};
 
 const gameProgression = () => {
   const number = randomNumber(1, 9);
@@ -21,6 +21,6 @@ const gameProgression = () => {
   return [correctAnswer, question, gameMessage];
 };
 
-const progression = () => engine(gameProgression);
+const progression = () => generateGame(gameProgression);
 
 export default progression;

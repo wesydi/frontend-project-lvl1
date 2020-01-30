@@ -1,5 +1,5 @@
 import randomNumber from '../utils';
-import engine from '..';
+import generateGame from '..';
 
 const gameMessage = 'Find the greatest common divisor of given numbers.';
 
@@ -19,6 +19,6 @@ const gameGcd = () => {
   return [correctAnswer, question, gameMessage];
 };
 
-const gcd = () => engine(gameGcd);
+const gcd = () => generateGame(gameGcd);
 
 export default gcd;
