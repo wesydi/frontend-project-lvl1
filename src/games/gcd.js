@@ -4,11 +4,11 @@ import engine from '..';
 const gameMessage = `Find the greatest common divisor of given numbers.`;
 
 const getCommonDivider = (number1, number2) => {
-  let answer = '';
-  for (let i = 0; i < 100; i += 1) {
-    if (number1 % i === 0 && number2 % i === 0) answer = i;
+  let commonDivider;
+  for (let i = 1; i < 100; i += 1) {
+    if (number1 % i === 0 && number2 % i === 0) commonDivider = i;
   }
-  return answer;
+  return commonDivider;
 };
 
 const gameGcd = () => {
