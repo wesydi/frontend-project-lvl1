@@ -13,7 +13,7 @@ const generateGame = (dataOfGame) => {
     if (answerCorrect !== answerUser) {
       return console.log(`'${answerUser}' is wrong answer ;(. Correct answer was '${answerCorrect}'. \nLet's try again, ${userName}!`);
     }
-    console.log('Correct!'); 
+    console.log('Correct!');
     return iter(acc + 1);
   };
   return iter(0);
