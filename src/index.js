@@ -10,11 +10,10 @@ const generateGame = (dataOfGame) => {
     const [answerCorrect, question] = dataOfGame();
     console.log(`Question: ${question}`);
     const answerUser = readlineSync.question('Your answer: ');
-    if (answerCorrect === answerUser) {
-      console.log('Correct!');
-    } else {
+    if (answerCorrect !== answerUser) {
       return console.log(`'${answerUser}' is wrong answer ;(. Correct answer was '${answerCorrect}'. \nLet's try again, ${userName}!`);
     }
+    console.log('Correct!'); 
     return iter(acc + 1);
   };
   return iter(0);
