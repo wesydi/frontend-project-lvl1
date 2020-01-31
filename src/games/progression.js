@@ -13,7 +13,7 @@ const getProgression = (firstElement, diff, length) => {
 
 const gameProgression = () => {
   const number = randomNumber(1, 9);
-  const progression = getProgression(number, number, 10);
+  const progression = getProgression(randomNumber(1, 10), number, 10);
   const progressionWithSkip = progression.slice();
   progressionWithSkip[number] = '..';
   const question = String(progressionWithSkip);
