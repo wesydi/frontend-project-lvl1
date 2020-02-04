@@ -1,7 +1,7 @@
 import randomNumber from '../utils';
 import generateGame from '..';
 
-const gameMessage = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const isPrime = (num) => {
   const array = [];
@@ -15,9 +15,9 @@ const gamePrime = () => {
   const number = randomNumber(1, 100);
   const question = String(number);
   const correctAnswer = isPrime(number) ? 'yes' : 'no';
-  return [correctAnswer, question, gameMessage];
+  return [correctAnswer, question];
 };
 
-const prime = () => generateGame(gamePrime);
+const prime = () => generateGame(description);
 
 export default prime;

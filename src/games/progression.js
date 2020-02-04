@@ -1,7 +1,7 @@
 import randomNumber from '../utils';
 import generateGame from '..';
 
-const gameMessage = 'What number is missing in the progression?';
+const description = 'What number is missing in the progression?';
 
 const getProgression = (firstElement, diff, length) => {
   const result = [firstElement];
@@ -13,14 +13,14 @@ const getProgression = (firstElement, diff, length) => {
 
 const gameProgression = () => {
   const number = randomNumber(1, 9);
-  const progression = getProgression(number, number, 10);
+  const progression = getProgression(randomNumber(1, 10), number, 10);
   const progressionWithSkip = progression.slice();
   progressionWithSkip[number] = '..';
   const question = String(progressionWithSkip);
   const correctAnswer = String(progression[number]);
-  return [correctAnswer, question, gameMessage];
+  return [correctAnswer, question];
 };
 
-const progression = () => generateGame(gameProgression);
+const progression = () => generateGame(description);
 
 export default progression;
