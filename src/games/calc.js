@@ -5,11 +5,11 @@ const description = 'What is the result of the expression?';
 
 const operations = ['*', '+', '-'];
 
-const calculator = (number1, number2, operator) => {
+const calculator = (arg1, arg2, operator) => {
   switch (operator) {
-    case '*': return number1 * number2;
-    case '+': return number1 + number2;
-    case '-': return number1 - number2;
+    case '*': return arg1 * arg2;
+    case '+': return arg1 + arg2;
+    case '-': return arg1 - arg2;
     default: return "It's not correct operation. Please use '*' or '+' or '-'";
   }
 };
