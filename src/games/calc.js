@@ -10,7 +10,7 @@ const calculator = (number1, number2, operator) => {
     case '*': return number1 * number2;
     case '+': return number1 + number2;
     case '-': return number1 - number2;
-    default: return "It's not correct operation. Please use '*' or '+' or '-'";
+    default: return null;
   }
 };
 
