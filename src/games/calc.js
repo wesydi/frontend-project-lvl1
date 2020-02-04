@@ -1,15 +1,15 @@
 import randomNumber from '../utils';
 import generateGame from '..';
 
-const gameMessage = 'What is the result of the expression?';
+const description = 'What is the result of the expression?';
 
 const operations = ['*', '+', '-'];
 
-const calculator = (arg1, arg2, operator) => {
+const calculator = (number1, number2, operator) => {
   switch (operator) {
-    case '*': return arg1 * arg2;
-    case '+': return arg1 + arg2;
-    case '-': return arg1 - arg2;
+    case '*': return number1 * number2;
+    case '+': return number1 + number2;
+    case '-': return number1 - number2;
     default: return "It's not correct operation. Please use '*' or '+' or '-'";
   }
 };
@@ -20,9 +20,9 @@ const gameCalc = () => {
   const num2 = randomNumber(1, 100);
   const question = `${num1} ${operation} ${num2}`;
   const correctAnswer = String(calculator(num1, num2, operation));
-  return [correctAnswer, question, gameMessage];
+  return [correctAnswer, question];
 };
 
-const calc = () => generateGame(gameCalc);
+const calc = () => generateGame(gameCalc, description);
 
 export default calc;
