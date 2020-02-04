@@ -23,6 +23,6 @@ const genGameData = () => {
   return [correctAnswer, question];
 };
 
-const calc = () => generateGame(genGameData, description); 
+const calc = () => generateGame(genGameData, description);
 
 export default calc;
