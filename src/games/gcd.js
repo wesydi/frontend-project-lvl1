@@ -11,7 +11,7 @@ const getCommonDivider = (number1, number2) => {
   return commonDivider;
 };
 
-const gameGcd = () => {
+const genGameData = () => {
   const num1 = randomNumber(1, 100);
   const num2 = randomNumber(1, 100);
   const question = `${num1}, ${num2}`;
@@ -19,6 +19,6 @@ const gameGcd = () => {
   return [correctAnswer, question];
 };
 
-const gcd = () => generateGame(gameGcd, description);
+const gcd = () => generateGame(genGameData, description);
 
 export default gcd;

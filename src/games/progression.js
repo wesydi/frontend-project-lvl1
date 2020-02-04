@@ -11,7 +11,7 @@ const getProgression = (firstElement, diff, length) => {
   return result;
 };
 
-const gameProgression = () => {
+const genGameData = () => {
   const number = randomNumber(1, 9);
   const progression = getProgression(randomNumber(1, 10), number, 10);
   const progressionWithSkip = progression.slice();
@@ -21,6 +21,6 @@ const gameProgression = () => {
   return [correctAnswer, question];
 };
 
-const progression = () => generateGame(description);
+const progression = () => generateGame(genGameData, description);
 
 export default progression;
