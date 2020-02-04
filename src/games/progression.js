@@ -12,13 +12,13 @@ const getProgression = (firstElement, diff, length) => {
 };
 
 const genGameData = () => {
-  const different = randomNumber(1, 10);
   const firstNumber = randomNumber(1, 10);
+  const different = randomNumber(1, 10);
   const lengthProgression = 10;
   const progression = getProgression(firstNumber, different, lengthProgression);
-  const hiddenIndex = randomNumber(1, 9);
-  const correctAnswer = String(progression[hiddenIndex]);
-  progression[hiddenIndex] = '..';
+  const hiddenElement = randomNumber(1, 9);
+  const correctAnswer = String(progression[hiddenElement]);
+  progression[hiddenElement] = '..';
   const question = progression.join(', ');
   return [correctAnswer, question];
 };
