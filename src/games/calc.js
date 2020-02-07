@@ -1,5 +1,5 @@
 import randomNumber from '../utils';
-import generateGame from '..';
+import runGame from '..';
 
 const description = 'What is the result of the expression?';
 
@@ -23,6 +23,6 @@ const genGameData = () => {
   return [correctAnswer, question];
 };
 
-const startCalc = () => generateGame(genGameData, description);
+const startCalc = () => runGame(genGameData, description);
 
 export default startCalc;

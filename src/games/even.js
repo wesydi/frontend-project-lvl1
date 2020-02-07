@@ -1,5 +1,5 @@
 import randomNumber from '../utils';
-import generateGame from '..';
+import runGame from '..';
 
 const description = 'Answer "yes" if the number is even, otherwise answer "no".';
 
@@ -12,6 +12,6 @@ const genGameData = () => {
   return [correctAnswer, question];
 };
 
-const startEven = () => generateGame(genGameData, description);
+const startEven = () => runGame(genGameData, description);
 
 export default startEven;

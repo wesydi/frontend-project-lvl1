@@ -1,12 +1,12 @@
 import randomNumber from '../utils';
-import generateGame from '..';
+import runGame from '..';
 
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const isPrime = (num) => {
   const array = [];
-  for (let divisior = 1; divisior <= num; divisior += 1) {
-    if (num % divisior === 0) array.push(divisior);
+  for (let divisor = 1; divisor <= num; divisor += 1) {
+    if (num % divisor === 0) array.push(divisor);
   }
   return (array.length === 2);
 };
@@ -18,6 +18,6 @@ const genGameData = () => {
   return [correctAnswer, question];
 };
 
-const startPrime = () => generateGame(genGameData, description);
+const startPrime = () => runGame(genGameData, description);
 
 export default startPrime;

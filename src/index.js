@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 
-const generateGame = (game, description) => {
+const runGame = (genGameDate, description) => {
   console.log(`Welcome to the Brain Games!\n${description}`);
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}\n`);
@@ -9,7 +9,7 @@ const generateGame = (game, description) => {
       console.log(`Congratulations, ${userName}!`);
       return;
     }
-    const [answerCorrect, question] = game();
+    const [answerCorrect, question] = genGameDate();
     console.log(`Question: ${question}`);
     const answerUser = readlineSync.question('Your answer: ');
     if (answerCorrect !== answerUser) {
@@ -19,7 +19,7 @@ const generateGame = (game, description) => {
     console.log('Correct!');
     iter(acc + 1);
   };
-  return iter(0);
+  iter(0);
 };
 
-export default generateGame;
+export default runGame;
