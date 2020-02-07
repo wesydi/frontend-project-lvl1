@@ -18,6 +18,6 @@ const genGameData = () => {
   return [correctAnswer, question];
 };
 
-const prime = () => generateGame(genGameData, description);
+const startPrime = () => generateGame(genGameData, description);
 
-export default prime;
+export default startPrime;

@@ -23,6 +23,6 @@ const genGameData = () => {
   return [correctAnswer, question];
 };
 
-const progression = () => generateGame(genGameData, description);
+const startProgression = () => generateGame(genGameData, description);
 
-export default progression;
+export default startProgression;

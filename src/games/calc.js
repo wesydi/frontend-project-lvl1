@@ -5,7 +5,7 @@ const description = 'What is the result of the expression?';
 
 const operations = ['*', '+', '-'];
 
-const calculator = (number1, number2, operator) => {
+const calculate = (number1, number2, operator) => {
   switch (operator) {
     case '*': return number1 * number2;
     case '+': return number1 + number2;
@@ -19,10 +19,10 @@ const genGameData = () => {
   const num1 = randomNumber(1, 100);
   const num2 = randomNumber(1, 100);
   const question = `${num1} ${operation} ${num2}`;
-  const correctAnswer = String(calculator(num1, num2, operation));
+  const correctAnswer = String(calculate(num1, num2, operation));
   return [correctAnswer, question];
 };
 
-const calc = () => generateGame(genGameData, description);
+const startCalc = () => generateGame(genGameData, description);
 
-export default calc;
+export default startCalc;

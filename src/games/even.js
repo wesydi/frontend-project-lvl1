@@ -12,6 +12,6 @@ const genGameData = () => {
   return [correctAnswer, question];
 };
 
-const even = () => generateGame(genGameData, description);
+const startEven = () => generateGame(genGameData, description);
 
-export default even;
+export default startEven;

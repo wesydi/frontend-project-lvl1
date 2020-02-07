@@ -19,6 +19,6 @@ const genGameData = () => {
   return [correctAnswer, question];
 };
 
-const gcd = () => generateGame(genGameData, description);
+const startGcd = () => generateGame(genGameData, description);
 
-export default gcd;
+export default startGcd;
