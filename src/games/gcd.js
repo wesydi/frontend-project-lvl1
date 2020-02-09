@@ -5,7 +5,8 @@ const description = 'Find the greatest common divisor of given numbers.';
 
 const getCommonDivider = (number1, number2) => {
   let commonDivider;
-  for (let divisor = 1; divisor < 100; divisor += 1) {
+  const maxNumber = number1 > number2 ? number1 : number2;
+  for (let divisor = 1; divisor < maxNumber; divisor += 1) {
     if (number1 % divisor === 0 && number2 % divisor === 0) commonDivider = divisor;
   }
   return commonDivider;
