@@ -12,7 +12,7 @@ const isPrime = (num) => {
 };
 
 const genGameData = () => {
-  const number = randomNumber(1, 101);
+  const number = randomNumber(1, 100);
   const question = String(number);
   const correctAnswer = isPrime(number) ? 'yes' : 'no';
   return [correctAnswer, question];
