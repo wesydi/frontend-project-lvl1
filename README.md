@@ -29,9 +29,6 @@ Answer "yes" if the number is even, otherwise answer "no".
 May I have your name? Andrew                                                    
 Hello, Andrew                                                                   
                                                                                 
-Question: 4                                                                     
-Your answer: no                                                                 
-'no' is wrong answer ;(. Correct answer was 'yes'. Let's try again, Andrew!     
 Question: 0                                                                     
 Your answer: yes                                                                
 Correct!                                                                        
